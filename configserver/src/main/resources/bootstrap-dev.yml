@@ -9,18 +9,19 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     lease-expiration-duration-in-seconds: 5
     lease-renewal-interval-in-seconds: 5
+
+spring:
+  application:
+    name: configserver
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/xshflove/springcloud #配置文件所在仓库
+          uri: https://github.com/xshflove/springcloud
           username: xshflove
           password: xshf88498398
-          default-label: master #配置文件分支
-          search-paths: config-file  #配置文件所在根目录
-spring:
-  application:
-    name: configserver
+          default-label: master
+          search-paths: config-file
 
 
 
